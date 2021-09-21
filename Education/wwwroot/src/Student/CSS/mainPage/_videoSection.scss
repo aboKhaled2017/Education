@@ -1,0 +1,31 @@
+﻿#videoSection {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+
+    .video-player {
+        width: $videoWidth;
+        margin: 5px;
+        box-shadow: -1px -2px 5px #444;
+        border-radius: 15px;
+        opacity: 0.7;
+
+        .video-js {
+            width: 100%;
+            height: $videoHeight;
+        }
+    }
+}
+
+#fluidPlayer {
+    position: absolute;
+    top: 0px;
+    width: 80%;
+    left: 10%;
+    z-index: 9999;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #31708fa8;
+    display: none;
+}

@@ -1,0 +1,194 @@
+/*header*/
+/*for body*/
+/*register and logni*/
+/*general*/
+#sideCategories {
+  background: blueviolet;
+  height: 100%;
+  max-height: 100%;
+  position: fixed;
+  padding: 0;
+  top: 61px;
+  padding-top: 20px;
+  right: 0px;
+  width: 16%;
+}
+#sideCategories nav {
+  padding-right: 10px;
+}
+#sideCategories nav li {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #ccccea;
+  margin: 7px 0;
+  padding-left: 0;
+  cursor: pointer;
+}
+#sideCategories nav li.active > a,
+#sideCategories nav li > a:hover {
+  background: #ccccea;
+  color: blueviolet;
+  font-weight: bold;
+}
+#sideCategories nav li.disabled > a {
+  cursor: not-allowed;
+}
+#sideCategories nav li > a {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: blueviolet;
+  color: #fff;
+  font-size: 19px;
+}
+
+#videosContainer .container {
+  margin: 0;
+  padding: 0;
+}
+#videosContainer .video-player {
+  max-width: 600px;
+  width: 600px;
+  margin: 5px auto;
+  box-shadow: -1px -2px 5px #444;
+}
+#videosContainer .video-player .video-js {
+  width: 100%;
+  height: 338px;
+}
+#videosContainer .video-player .video-js .vjs-has-started .vjs-control-bar {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.vjs-playlist {
+  border-radius: 7px;
+  border: 2px solid #eee;
+  max-height: 500px;
+  height: 500px;
+}
+.vjs-playlist .vjs-playlist-item-list {
+  padding: 3px;
+  transition: transform 0.7s ease-in;
+}
+
+.vjs-playlist-vertical .vjs-playlist-item {
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+
+@media (max-width: 990px) {
+  #sideCategories {
+    position: static;
+    height: inherit;
+    max-height: inherit;
+    width: fit-content;
+    padding: 3px;
+    border-radius: 5px;
+    margin: auto;
+  }
+  #sideCategories nav {
+    padding-right: 0;
+  }
+  #sideCategories nav li {
+    padding: 0;
+    margin: 0 1px;
+    border-radius: 0;
+    display: inline-block;
+    background: inherit;
+  }
+  #sideCategories nav li > a {
+    border-radius: 11px;
+    font-size: 14px;
+    padding: 3px 15px;
+  }
+  #sideCategories nav li > a:hover {
+    background: #e80917;
+    color: #fff;
+  }
+}
+@media (min-width: 991px) and (max-width: 1200px) {
+  #videosContainer .video-player {
+    max-width: 550px;
+    width: 550px;
+  }
+  #videosContainer .video-player .video-js {
+    height: 310px;
+  }
+}
+@media (min-width: 768px) and (max-width: 990px) {
+  #videosContainer > .container-fluid {
+    padding: 0;
+  }
+  #videosContainer .videoArea {
+    padding: 0;
+  }
+  #videosContainer .videoArea .video-player {
+    max-width: 510px;
+    width: 510px;
+  }
+  #videosContainer .videoArea .video-player .video-js {
+    height: 287px;
+  }
+}
+@media (max-width: 767px) {
+  #videosContainer .video-player {
+    max-width: 450px;
+    width: 450px;
+  }
+  #videosContainer .video-player .video-js {
+    height: 253px;
+  }
+  #videosContainer .videoArea {
+    padding: 0;
+  }
+  #videosContainer .videoArea .videoAreaPlayer {
+    padding: 0;
+  }
+
+  .playerList {
+    margin-top: 60px;
+  }
+
+  .vjs-playlist {
+    height: auto;
+    max-height: 439px;
+  }
+  .vjs-playlist .vjs-playlist-item {
+    height: 70px;
+    border-bottom: 1px solid #999;
+  }
+  .vjs-playlist .vjs-playlist-item img {
+    height: -webkit-fill-available;
+    height: fill-available;
+    height: -moz-fill-available;
+    height: -o-fill-available;
+    width: auto;
+  }
+  .vjs-playlist .vjs-playlist-item .vjs-playlist-name {
+    text-align: left;
+  }
+}
+@media (max-width: 550px) {
+  #videosContainer .video-player {
+    max-width: 340px;
+    width: 340px;
+  }
+  #videosContainer .video-player .video-js {
+    height: 191px;
+  }
+}
+@media (max-width: 360px) {
+  #videosContainer .video-player {
+    max-width: 300px;
+    width: 300px;
+  }
+  #videosContainer .video-player .video-js {
+    height: 169px;
+  }
+
+  .playerList {
+    margin-top: 80px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

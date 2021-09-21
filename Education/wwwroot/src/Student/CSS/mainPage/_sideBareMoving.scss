@@ -1,0 +1,47 @@
+.closedSideBar{
+    width:$minimizedSideBarWidth;
+     .nav{
+         li{
+           a{
+               padding: 5px;
+            i{
+                font-size: 25px;
+                line-height: 30px;
+                width: 100%;
+                display: block;
+                text-align: center;
+                float: none;
+                 margin: auto;
+            }
+            p{
+                display: none;
+            }
+           }
+         }
+        
+     }
+}
+.sidebar{
+    transition: all .5s ease-in-out;
+    border-top-right-radius: 10px;
+   .nav {   
+       li.active{
+        color: #ec0816;
+       }
+       li.toggleOpen{
+        height: 22px;
+        background: $mainColor;
+        cursor: pointer;
+        i{
+            font-size: 15px;
+            line-height: 1.5;
+            font-weight: bold;
+            width: 100%;
+            transition: transform .3s ease-in-out;
+            &.rotate{
+                transform: rotateZ(180deg);
+            }
+        }
+       }
+   }
+}

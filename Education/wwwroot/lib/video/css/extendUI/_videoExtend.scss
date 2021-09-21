@@ -1,0 +1,29 @@
+#subPlayerSection {
+    background: #f5f5f5;
+    padding: 5px;
+    color: #000;
+    border-radius: 5px;
+    bottom: -19%;
+    width: 100%;
+    position: absolute;
+}
+@media (max-width: 991px) {
+  #subPlayerSection {
+    bottom: -17%;
+  }
+}
+@media (max-width: 767px) {
+  #subPlayerSection {
+    bottom: -19%;
+  }
+}
+@media (max-width: 549px) {
+  #subPlayerSection {
+    bottom: -25%;
+  }
+}
+@media (max-width: 360px) {
+  #subPlayerSection {
+    bottom: -43%;
+  }
+}

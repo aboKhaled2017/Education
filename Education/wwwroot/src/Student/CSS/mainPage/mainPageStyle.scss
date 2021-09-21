@@ -1,0 +1,20 @@
+@import '../variables';
+#mainPage {
+    > #imgBg {
+        height: 625px;
+        margin-top: 0px; 
+    }
+}
+nav.navbar {
+    background: transparent;
+    border-bottom: none;
+}
+@media (max-width: 767px)
+{
+.navbar-nav > li > a,
+.navbar-nav > li > a:focus {
+    opacity: 1 !important;
+     background: $mainColor !important;
+     color:#fff !important;
+}
+}

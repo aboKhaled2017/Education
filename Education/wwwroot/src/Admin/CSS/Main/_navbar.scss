@@ -1,0 +1,11 @@
+﻿.navbar-nav {
+    > li:not(.dropdown) {
+        > a {
+            &.active, &:hover {
+                background: #8664cd !important;
+                color: #fff !important;
+                border-radius: 5px !important;
+            }
+        }
+    }
+}

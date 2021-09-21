@@ -1,0 +1,122 @@
+/*header*/
+/*for body*/
+/*register and logni*/
+/*general*/
+* {
+  box-sizing: border-box;
+}
+
+#profileBg {
+  background-image: url(/images/profile.jpg);
+  margin: -10px -5px;
+  padding: 10px;
+  height: 450px;
+}
+#profileBg .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  background-color: #3333338a;
+  z-index: 1;
+}
+#profileBg .profileContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+#profileBg .profileContent .ProfileHeader .welcomH {
+  text-shadow: 8px 0px 10px #444;
+  color: #fff;
+}
+#profileBg .profileContent .ProfileHeader p {
+  color: #fff;
+}
+
+#profileTabs {
+  width: 80%;
+}
+#profileTabs .tab-content {
+  background: transparent;
+  padding: 6px;
+  color: #fff;
+}
+#profileTabs .nav-pills > li {
+  float: none;
+  width: 20%;
+  display: inline-block;
+}
+#profileTabs .nav-pills > li > a {
+  background: #999;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  font-weight: bold;
+  opacity: 0.6;
+  color: #fff;
+}
+#profileTabs .nav-pills > li > a:hover {
+  background: #e80917;
+  color: #fff;
+  opacity: 1;
+}
+#profileTabs .nav-pills > li.active > a {
+  background: #e80917;
+  opacity: 1;
+}
+#profileTabs .formArea form {
+  padding: 11px;
+  background: #eee;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 991px) {
+  #profileTabs {
+    width: 90%;
+  }
+  #profileTabs .formArea .editAccount, #profileTabs .formArea .editPassword {
+    padding: 1px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #profileTabs {
+    width: 100%;
+  }
+  #profileTabs .formArea {
+    padding: 0;
+  }
+  #profileTabs .formArea form {
+    margin: auto -18px;
+  }
+  #profileTabs .formArea form .input100 {
+    font-size: 16px;
+    line-height: 1;
+    height: 40px;
+  }
+  #profileTabs .formArea form .login100-form-btn {
+    font-size: 11px;
+  }
+  #profileTabs .formArea .editAccount, #profileTabs .formArea .editPassword {
+    padding: 10px;
+  }
+  #profileTabs .nav-pills > li {
+    width: 40%;
+  }
+  #profileTabs .nav-pills > li a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 361px) {
+  #profileTabs .nav-pills > li {
+    width: 45%;
+  }
+  #profileTabs .formArea {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=entry.css.map */

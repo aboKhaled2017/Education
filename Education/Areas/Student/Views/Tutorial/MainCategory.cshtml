@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["datapage"] = "tutorial";
+}
+@model List<CategoryData>
+@{
+    ViewData["Title"] = "";
+    var urls = new List<Tuple<string, string>>();
+    @foreach (var item in Model)
+    {
+        urls.Add(Html.makeTutorialUrl_main_category(item.Id, item.Name));
+    }
+}
+@section style {
+    <link rel="stylesheet" href="/lib/video/videojs-playlist-ui.css">
+    <link rel="stylesheet" href="/src/Student/CSS/tutorial/main.css">
+}
+@section Scripts{
+    <!--<script src="/lib/video/Youtube.min.js"></script>
+    <script src="/lib/video/videojs-playlist.min.js"></script>-->
+}
+    
+    <div id="videosContainer">
+        @{await Html.RenderPartialAsync("videos", urls);}
+    </div>
+
+

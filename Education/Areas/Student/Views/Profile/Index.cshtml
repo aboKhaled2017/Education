@@ -1,0 +1,33 @@
+﻿@model Tuple<StudentAccount, ChangePasswordViewModel,StudentMembership>
+    @{
+        ViewData["Title"] = "الصفحة الشخصية";
+        ViewData["datapage"] = "profile";
+    }
+    @section style {
+    <link rel="stylesheet" href="/src/Student/CSS/profile/entry.css" />
+    }
+    <div id="profileBg">
+        <div class="cover"></div>
+
+        <div class="profileContent">
+            <div class="ProfileHeader">
+                <h3 class="text-center welcomH wow  bounceOut" data-wow-delay="1s">مرحبا بك
+                    <span>@User.Identity.Name</span></h3>
+                <p class="text-center">قم باختيار الفصل الدراسى</p>
+            </div>
+            <div id="profileTabs" class="center-block">
+                <ul class="nav nav-pills center-block">
+                    <li><a data-toggle="pill" href="#accountTabe">حسابك الشخصى</a></li>
+                    <li class="active"><a data-toggle="pill" href="#membershipTab">عضويتك</a></li>
+                </ul>
+                <div class="tab-content center-block">
+                    <div id="accountTabe" class="tab-pane fade ">
+                        @{await Html.RenderPartialAsync("accountTab",@Model);}
+                    </div>
+                    <div id="membershipTab" class="tab-pane fade active in">
+                        @{await Html.RenderPartialAsync("membershipTab",@Model.Item3);}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+#profileBg{
+    background-image: url(/images/profile.jpg);
+    margin: -10px -5px;
+    padding: 10px;
+    height: 450px;
+    .cover{
+        position: absolute;
+        top:0;
+        left: 0;
+        width:100%;
+        height: 450px;
+        background-color: #3333338a;
+        
+        z-index: 1;
+    }
+    .profileContent{
+        position: absolute;
+        top:0;
+        left: 0;
+        width:100%;
+        height: 100%;
+      z-index: 2;
+      .ProfileHeader{
+          .welcomH{
+            text-shadow: 8px 0px 10px #444;
+              color:#fff;
+          }
+          p{
+              color:#fff;
+          }
+      }
+    }
+}
+#profileTabs {
+    width: 80%;
+
+    .tab-content {
+        background: transparent;
+        padding: 6px;
+        color: #fff;
+    }
+
+    .nav-pills {
+        > li {
+            float: none;
+            width: 20%;
+            display: inline-block;
+
+            > a {
+                background: #999;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                font-weight: bold;
+                opacity: .6;
+                color: #fff;
+
+                &:hover {
+                    background: $secondColor;
+                    color: #fff;
+                    opacity: 1;
+                }
+            }
+
+            &.active {
+                > a {
+                    background: $secondColor;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .formArea {
+        form {
+            padding: 11px;
+            background: #eee;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+    }
+}

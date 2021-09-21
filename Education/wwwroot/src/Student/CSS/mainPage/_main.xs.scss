@@ -1,0 +1,32 @@
+@media screen and (max-width: 360px) {
+  .modal {
+    width: 100% !important;
+    .modal-body {
+      padding: 3px;
+    }
+  }
+  #videoSection {
+    position: static;
+    .video-player {
+      width: 300px;
+      .video-js {
+        height: 169px;
+      }
+    }
+  }
+  .formArea .internalRegister {
+    width: 100%;
+    padding: 3px;
+    .input100 {
+      font-size: 17px;
+      width: 100%;
+    }
+    .login100-form-btn {
+      height: 50px;
+    }
+  }
+  #fluidPlayer {
+    width: 96%;
+    left: 2%;
+  }
+}

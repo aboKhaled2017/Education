@@ -1,0 +1,33 @@
+.navbar {
+    background: $mainColor;
+    .nav > li > a:hover, .nav > li > a:focus {
+        background: inherit;
+        color:#fff;
+    }
+    .navbar-header .navbar-toggle{
+        i{
+            font-size: 22px;
+        color:#fff;
+        }
+        .icon-bar {
+            background-color: #fff;
+        }
+    }
+    .navbar-brand > img {
+        width: 100px;
+        margin-top: -14%;
+    }
+
+    &_signAndLogin > li {
+        width: $navBarLiWidth !important;
+        >a {
+        pointer-events:unset;
+        cursor: pointer;
+        background: $mainColor;
+        }
+    }
+}
+.info{
+    background: crimson !important;
+    color: #fff !important;
+}

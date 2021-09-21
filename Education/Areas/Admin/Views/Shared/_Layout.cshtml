@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/lib/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="/lib/bootstrapAr/css/bootstrap-ar.css">
+    <link rel="stylesheet" href="/src/Admin/Assests/BootstrapComponents/light-bootstrap-dashboard.css">
+    <link rel="stylesheet" href="/lib/fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/src/Admin/CSS/Login/login.css">
+    <link rel="stylesheet" href="/src/Admin/CSS/Main/Entry.css">
+    @RenderSection("Styles", required: false)  
+</head>
+
+<body>
+    <div class="wrapper">
+        @{await Html.RenderPartialAsync("sidebar");}
+        <div class="main-panel">
+            @{await Html.RenderPartialAsync("navbar");}
+            <div class="content">
+                @RenderBody()
+            </div>
+            @{await Html.RenderPartialAsync("footer");}
+        </div>
+    </div>
+    @RenderSection("Modals", required: false)
+    <script src="/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script src="/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/lib/bootstrapAr/js/bootstrap.min.js"></script>
+    <script src="/src/Admin/Assests/BootstrapComponents/light-bootstrap-dashboard.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

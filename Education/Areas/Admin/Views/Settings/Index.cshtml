@@ -1,0 +1,74 @@
+﻿@model TeacherModel
+@{
+    ViewData["Title"] = "الاعدادات";
+}
+@section Styles{
+     
+}
+@section Scripts{
+      <script src="/dist/Admin/js/Settings.bundle.js"></script>
+}
+<h2 class="text-primary text-center">الأعدادت الأساسية</h2>
+<div class="container-fluid" id="BgImages">
+    <div class="row"> 
+      <div class="col-md-12">  
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#ImgSettingCollaps">
+                  <span>اعدادات صور الخلفية </span>
+                  <i class="fa fa-picture-o"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="ImgSettingCollaps" class="panel-collapse collapse">
+              <div class="panel-body">
+                <div class="container-fluid">
+                    <div class="row images">
+                      <div class="text-center loading">
+                        <i class="fa fa-spin fa-spinner"></i>
+                      </div>  
+                  </div>
+                </div>
+                </div>
+              <div class="panel-footer">
+                <button class="btn btn-primary" id="AddNewBgImg">
+                  <span>اضافة صورة جديدة</span>
+                  <i class="fa fa-picture-o"></i>
+                </button>
+                <button class="btn btn-danger" id="DeleteBgImg">
+                  <span>حذف الصور المحددة</span>
+                  <i class="fa fa-remove"></i>
+                </button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row"> 
+      <div class="col-md-12">  
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#MembershipCollaps">
+                  <span>عضويتى</span>
+                  <i class="fa fa-user-o"></i>
+                </a>
+              </h4>
+            </div>
+            <div id="MembershipCollaps" class="panel-collapse collapse">
+              <div class="panel-body">
+                <partial name="Membership"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+          
+    
+ 

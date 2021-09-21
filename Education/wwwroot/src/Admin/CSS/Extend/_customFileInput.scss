@@ -1,0 +1,66 @@
+﻿.custom-file {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: calc(3.0625rem + 4px);
+    margin-bottom: 0;
+
+    &-label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        height: calc(3.0625rem + 4px);
+        padding: 0.375rem 0.75rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        border: 2px solid #ced4da;
+        border-radius: 4px;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 3;
+            display: block;
+            height: 3.0625rem;
+            padding: 0.375rem 0.75rem;
+            line-height: 1.5;
+            color: #495057;
+            content: "تحميل ملف";
+            background-color: #e9ecef;
+            border-left: 2px solid #ced4da;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .text {
+            text-align: center;
+            display: block;
+        }
+    }
+
+    &-input {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: calc(3.0625rem + 4px);
+        margin: 0;
+        opacity: 0;
+
+        &:focus ~ .custom-file-label {
+            border-color: #009688;
+            box-shadow: none;
+        }
+
+        &:focus ~ .custom-file-label::after {
+            border-color: #009688;
+        }
+
+        &:lang(en) ~ .custom-file-label::after {
+            content: "Load File";
+        }
+    }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"JsEntry.js","sourceRoot":"","sources":["JsEntry.ts"],"names":[],"mappings":";;AAAA,gCAA8B;AAC9B,mCAAiC;AACjC,2BAAyB;AACzB,0BAAwB;AACxB,2BAAyB","sourcesContent":["import '../../global/setting';\r\nimport '../../global/helperDome';\r\nimport './mainPage/main';\r\nimport './Profile/main';\r\nimport './Tutorial/main';\r\n\r\n\r\n"]}

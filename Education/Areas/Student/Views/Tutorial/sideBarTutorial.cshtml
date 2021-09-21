@@ -1,0 +1,25 @@
+@model List<Tuple<string,string>>
+  @{
+    byte secondOffset=0;
+    string delay="";
+  }
+   <nav class="nav flex-column">
+               @foreach (var url in Model)
+               {
+                 secondOffset+=2;
+                 string activeItem=(secondOffset==2)?"active":"";
+                 delay=String.Format(".{0}s",secondOffset);
+                <li class="nav-item wow bounceIn @activeItem" data-wow-delay="@delay">
+                    <a class="nav-link active" href="javascript::void(0)" data-href="@url.Item2">@url.Item1</a>
+                </li>
+
+                <li class="nav-item wow bounceIn @activeItem" data-wow-delay="@delay">
+                    <a class="nav-link active" href="javascript::void(0)" data-href="@url.Item2">@url.Item1</a>
+                </li>
+                <li class="nav-item wow bounceIn @activeItem" data-wow-delay="@delay">
+                    <a class="nav-link active" href="javascript::void(0)" data-href="@url.Item2">@url.Item1</a>
+                </li>
+               }
+    </nav>
+  
+  

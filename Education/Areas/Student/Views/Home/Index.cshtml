@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "الصفحة الرئيسية";
+    ViewData["datapage"] = "home";
+}
+@section style{
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <link rel="stylesheet" href="/src/Student/CSS/mainPage/mainPageStyle.css">
+    }
+}
+<section id="mainPage">
+    <div id="imgBg">
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+        <img alt="" srcset="">
+        <div id="videoSection">
+            <div class="video-player pull-right wow bounceInDown" data-wow-delay="1s">
+                <video-js id="guidalVideo" controls preload="auto" poster="/images/videoRight.jpg">
+                    <source src="~/videos/1.mp4" type="video/mp4">
+                    <source src="~/videos/1.ogg" type="video/ogg">
+                </video-js>
+            </div>
+            <div class="video-player pull-left wow bounceInDown" data-wow-delay="3s">
+                <video-js id="educationVideo" controls preload="auto" poster="/images/videoLeft.jpg">
+                    <source src="~/videos/1.mp4" type="video/mp4">
+                    <source src="~/videos/1.ogg" type="video/ogg">
+                </video-js>
+            </div>
+        </div>
+    </div>
+</section>
+@section fluidPlayer{
+    <div id="fluidPlayer">
+
+    </div>
+}
+@if (!User.Identity.IsAuthenticated)
+{
+    await Html.RenderPartialAsync("register");
+    await Html.RenderPartialAsync("login");
+}

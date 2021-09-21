@@ -1,0 +1,35 @@
+@{ 
+    string categoryClass = (string)ViewBag.activeItem == "categoryPage" ? "active" : "";
+    string settingsClass = (string)ViewBag.activeItem == "settingsPage" ? "active" : "";
+    string coursesClass = (string)ViewBag.activeItem == "coursesPage" ? "active" : "";
+}
+<div class="sidebar" data-color="purple" data-image="/images/admin/sidebar-5.jpg">
+    <div class="sidebar-wrapper">
+        <div class="logo">
+            <a href="/" class="simple-text">
+                الموقع الرئيسى
+            </a>
+        </div>
+
+        <ul class="nav">
+            <li class="@categoryClass">
+                <a href="/Admin/Category">
+                    <i class="pe-7s-note2"></i>
+                    <p>الاقسام</p>
+                </a>
+            </li>
+            <li class="@settingsClass">
+                <a href="/Admin/Settings">
+                    <i class="pe-7s-settings"></i>
+                    <p>الاعدادات </p>
+                </a>
+            </li>
+            <li class="@coursesClass">
+                <a href="/Admin/Courses">
+                    <i class="pe-7s-science"></i>
+                    <p>الكورسات</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

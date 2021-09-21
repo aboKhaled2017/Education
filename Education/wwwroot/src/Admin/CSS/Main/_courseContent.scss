@@ -1,0 +1,78 @@
+﻿#course_content {
+  .DivPart {
+    display: inline-block;
+    background: #dddddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 2px;
+  }
+}
+#VideoUploadProgressbar {
+  height: 8px;
+  margin: 1px;
+  border: 0;
+  background: #d4cece;
+}
+.imgSetting {
+  margin: 5px;
+  > img,
+  > button {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+label.radio-inline {
+  margin: auto 10px;
+  input[type="radio"] {
+    width: 18px;
+    height: 18px;
+  }
+  .text {
+    vertical-align: middle;
+    margin: auto 3px;
+  }
+}
+ 
+.input-group > .custom-select,
+.input-group > .custom-file {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+}
+ /*
+.input-group > .custom-select:focus,
+.input-group > .custom-file:focus {
+  z-index: 3;
+}
+.input-group > .form-control + .custom-file,
+.input-group > .custom-file + .custom-file {
+  margin-left: -2px;
+}
+.input-group > .custom-file {
+  display: flex;
+  align-items: center;
+}
+
+.input-group > .custom-file:not(:last-child) .custom-file-label,
+.input-group > .custom-file:not(:last-child) .custom-file-label::after {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group > .custom-file:not(:first-child) .custom-file-label {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+*/
+#VideosTable {
+    .DescriptionTd {
+        margin: 6px 1px;
+        border: 1px solid #ccc;
+        background: #fff;
+        border-radius: 5px;
+        padding: 3px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

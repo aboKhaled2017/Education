@@ -1,0 +1,35 @@
+﻿ @model List<Tuple<string,string>>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-xs-12">
+      <div  id="sideCategories">
+              @{await Html.RenderPartialAsync("sideBarTutorial",Model);}
+      </div>
+    </div>
+    <div class="col-md-10 col-xs-12">
+      <div class="container-fluid videoArea">
+        <div class="row">
+          <div class="col-md-9 col-sm-9 videoAreaPlayer">
+              <div  class="video-player">
+                  <video-js id="video" controls preload="auto">
+
+                  </video-js>
+              </div>
+            </div>
+            <div class="playerList col-md-3 col-sm-3">
+                <div class="center-block text-center">
+                    <div class="center-block vjs-playlist">
+                    
+                    </div>
+                    <buttn id="loadMoreVideos" class="btn btn-primary">
+                        المزيد من الفيديوهات ...
+                        <i class="fa"></i>
+                    </buttn>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

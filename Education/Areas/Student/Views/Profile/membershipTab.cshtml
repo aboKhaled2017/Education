@@ -1,0 +1,102 @@
+@model StudentMembership
+@{
+bool isRegisteredMember=@Model!=null;
+string memberStyle=isRegisteredMember?"style=display:block":"style=display:none";
+string notMemberStyle=isRegisteredMember?"style=display:none":"style=display:block";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="membershipAccount">
+                <div class="header">
+                    <div class="member" @memberStyle>
+                        <h4 class="title badge badge-primary">تعديل بيانات العضوية</h4>
+                    </div>
+                    <div class="notMember" @notMemberStyle>
+                        <h4 class="title">من فضلك قم بتسجيل بيانات عضويتك</h4>
+                        <p class="alert alert-danger">
+                            هده البيانات تمثل عضويتك بالأكاديمية وهذا التسجيل يتيح
+                            لك
+                            الاشتراك
+                            فى الدروس الخاصة والدورات
+                            الخاصة بالأكاديمية
+                        </p>
+                    </div>
+                </div>
+                <div class="content formArea">
+                    <form action="" id="MembershipForm" method="" data-isRegistered="@isRegisteredMember">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <div class="wrap-input100 validate-input">
+                                    <input asp-for="FullName" class="input100" placeholder="الاسم بالكامل ثلاثى">
+                                    <span asp-validation-for="FullName" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-user-circle"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="wrap-input100 validate-input">
+                                    <input asp-for="School" class="input100" placeholder="اسم المدرسة">
+                                    <span asp-validation-for="School" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-institution"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="wrap-input100 validate-input">
+                                    <input asp-for="Phone" class="input100" placeholder="رقم هاتفك">
+                                    <span asp-validation-for="Phone" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-mobile-phone"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="wrap-input100 validate-input">
+                                    <input asp-for="BirthDate" class="input100" placeholder="تاريخ ميلادك">
+                                    <span asp-validation-for="BirthDate" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-calendar-check-o"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <div class="wrap-input100 validate-input">
+                                    <input asp-for="FatherPhone" class="input100" placeholder="رقم هاتف والدك">
+                                    <span asp-validation-for="FatherPhone" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-mobile-phone"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="wrap-input100 validate-input">
+                                    <input asp-for="FatherWork" class="input100" placeholder="عمل والدك">
+                                    <span asp-validation-for="FatherWork" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-tasks"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" type="button" @notMemberStyle id="MemshipRegistBtn"
+                            class="notMember btn btn-primary btn-fill pull-right">
+                            <i class="fa fa-user-circle"></i>
+                            <span>تسجيل</span>
+                        </button>
+                        <button type="button" type="button" @memberStyle id="MemshipEditBtn"
+                            class="member btn btn-danger btn-fill pull-right">
+                            <i class="fa fa-edit"></i>
+                            <span>تعديل</span>
+                        </button>-->
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

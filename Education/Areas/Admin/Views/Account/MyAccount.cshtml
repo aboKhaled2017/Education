@@ -1,0 +1,64 @@
+﻿@model AdminerModel
+@{
+ViewData["Title"] = "حسابى";
+}
+@section Scripts{
+<script src="/dist/Admin/js/Account.bundle.js"></script>
+}
+<h2 class="text-primary text-center">حسابى</h2>
+<div class="container-fluid">
+
+    <div class="row alert-">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">بيانات المسؤول</h4>
+                </div>
+                <div class="content">
+                    <form id="UpdateNameForm">
+                        <div class="form-group">
+                            <label asp-for="Name" class="control-label text-right"></label>
+                            <input asp-for="Name" class="form-control" aria-describedby="my-addon">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <button id="NameSubmitBtn" class="btn btn-primary" type="submit">
+                                حفظ
+                                <i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">بيانات حسابك</h4>
+                </div>
+                <div class="content">
+                    <form id="UpdateAccountForm">
+                        <div class="form-group">
+                            <label asp-for="UserName" class="control-label text-right"></label>
+                            <input asp-for="UserName" class="form-control" aria-describedby="my-addon">
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="password" class="control-label text-right"></label>
+                            <input asp-for="password" class="form-control" aria-describedby="my-addon">
+                            <span asp-validation-for="password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <button id="accountSaveBtn" class="btn btn-primary" type="submit">
+                                حفظ
+                                <i class="fa fa-send"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

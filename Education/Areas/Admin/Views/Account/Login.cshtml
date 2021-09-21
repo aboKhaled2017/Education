@@ -1,0 +1,73 @@
+﻿@model AdminLoginModel
+@{
+Layout=null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>الدخول للمسؤل</title>
+    <link rel="stylesheet" href="/lib/bootstrapAr4/scss/bootstrap.css">
+    <link rel="stylesheet" href="/lib/fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/src/Admin/CSS/Login/login.css">
+    <script src="/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script defer src="/lib/bootstrapAr4/dist/js/bootstrap.js"></script>
+    <script defer src="/src/Admin/JS/Login/login.js"></script>
+</head>
+
+<body dir="rtl">
+    <div id="loginForm" class="container">
+        <h2 class="text-primary text-center">الدخول الى صفحة المسؤل</h2>
+        <div class="img center-block text-center">
+            <i class="fa fa-user-circle"></i>
+        </div>
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label text-right"></label>
+                <span asp-validation-for="Username" class="text-danger pull-left"></span>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="my-addon">
+                            <i class="fa fa-user fa-10px text-primary font-weight-bold"></i>
+                        </span>
+                    </div>
+                    <input asp-for="Username" class="form-control" aria-describedby="my-addon">
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label text-right"></label>
+                <span asp-validation-for="Password" class="text-danger pull-left"></span>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="my-addon">
+                            <i class="fa fa-lock fa-10x text-primary font-weight-bold"></i>
+                        </span>
+                    </div>
+                    <input asp-for="Password" class="form-control" aria-describedby="my-addon">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input asp-for="RememberMe" id="my-input" class="custom-control-input" type="checkbox">
+                    <label for="my-input" class="custom-control-label">
+                        @Html.DisplayNameFor(model =>
+                        model.RememberMe)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">
+                    دخول
+                    <i class="fa fa-send"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

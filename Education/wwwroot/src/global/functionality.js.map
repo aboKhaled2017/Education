@@ -1,0 +1,1 @@
+{"version":3,"file":"functionality.js","sourceRoot":"","sources":["functionality.ts"],"names":[],"mappings":";;AAAA,IAAY,aAIX;AAJD,WAAY,aAAa;IACrB,2DAAc,CAAA;IACd,+DAAgB,CAAA;IAChB,iFAAyB,CAAA;AAC7B,CAAC,EAJW,aAAa,GAAb,qBAAa,KAAb,qBAAa,QAIxB","sourcesContent":["export enum requestStatus {\r\n    NotFound = 404,\r\n    BadRequest = 400,\r\n    InternalServerError = 505\r\n}"]}

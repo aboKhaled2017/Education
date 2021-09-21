@@ -1,0 +1,101 @@
+@model StudentRegisterModel
+<div id="registerModal" class="modal formModal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="row">
+                    <div class="col-sm-4 hidden-xs formImgArea">
+                        <img class="" src="/images/register.png" alt="" class="image-1">
+                    </div>
+                    <div class="col-sm-8 col-xs-12 formArea center-block">
+                        <div class="externalRegister">
+                            <h3 class="text-center">سجل دخول بأستخدام</h3>
+                            <div class="externalBtns text-center">
+                                <button class="facebook btn btn-primary">
+                                    <i class="fa fa-facebook"></i>
+                                    فيسبوك
+                                </button>
+                                <button class="google btn btn-danger">
+                                    <i class="fa fa-google"></i>
+                                    جيميل
+                                </button>
+                            </div>
+                        </div>
+                        <div class="or">
+                            <div class="center-block text-center">أو</div>
+                        </div>
+
+                        <form id="internalRegisterForm" 
+                            class="internalRegister center-block">
+                            <div class="formAlert alert alert-danger"></div>
+                            <div class="form-group">
+                                <div class="wrap-input100 validate-input m-b-16">
+                                    <input asp-for="fname" class="input100" type="text" placeholder="الاسم الاول">
+                                    <span asp-validation-for="fname" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-user"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="wrap-input100 validate-input m-b-16">
+                                    <input asp-for="lname" class="input100" type="text" placeholder="الاسم الاخير">
+                                    <span asp-validation-for="lname" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-user"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="wrap-input100 validate-input m-b-16">
+                                    <input asp-for="email" class="input100" type="text" placeholder="البريد الألكترونى">
+                                    <span asp-validation-for="email" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-envelope"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="wrap-input100 validate-input m-b-16">
+                                    <input asp-for="password" class="input100" placeholder="كلمة السر">
+                                    <span asp-validation-for="password" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-lock"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="wrap-input100 validate-input m-b-16">
+                                    <input asp-for="confirmPassword" class="input100" placeholder="تأكيد كلمة السر">
+                                    <span asp-validation-for="confirmPassword" class="focus-input100"></span>
+                                    <span class="symbol-input100">
+                                        <span class="fa fa-lock"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="contact100-form-checkbox m-l-4">
+                                    <input asp-for="RememberMe" class="input-checkbox100" id="ckb1" type="checkbox">
+                                    <label class="label-checkbox100" for="ckb1">
+                                        تذكرنى
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="container-login100-form-btn p-t-25">
+                                <button id="registerSubmitBtn" class="login100-form-btn" type="button">
+                                    <i class="fa fa-send"></i>
+                                    <span>سجل الان </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

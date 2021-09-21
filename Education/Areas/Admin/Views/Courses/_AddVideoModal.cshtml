@@ -1,0 +1,81 @@
+﻿@model VideoModel
+<div  id="AddVideoModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">اضافة فديو جديد</h4>
+            </div>
+            <div class="modal-body">
+                <div class="ExtendedForm">
+                    <form id="AddVideoForm" class="center-block container-fluid">
+                        @Html.AntiForgeryToken()
+                        <input asp-for="CourseId" class="hidden">
+                        <div class="formAlert alert alert-danger"></div>
+                        <div class="form-group">
+                            <div class="wrap-input100 validate-input m-b-16">
+                                <input asp-for="Title" class="input100">
+                                <span asp-validation-for="Title" class="focus-input100"></span>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <div class="wrap-input100 validate-input m-b-16">
+                                    <textarea  asp-for="Description"
+                                              style="height:100px;padding-top: 12px;" class="input100">
+                                  </textarea>
+                                    <span asp-validation-for="Description" class="focus-input100"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="wrap-input100 validate-input m-b-16">
+                                    <input asp-for="VideoNumber" class="input100">
+                                    <span asp-validation-for="VideoNumber" class="focus-input100"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="IsYoutube"></label>
+                                <label class="radio-inline pull-right">
+                                    <input type="radio" name="IsYoutube" disabled id="youtubeChoice" value="true">
+                                    <span class="text">بواسطة رابط يوتيوب</span>
+                                </label>
+                                <label class="radio-inline pull-right">
+                                    <input type="radio" name="IsYoutube" id="notyoutubeChoice" value="false" checked>
+                                    <span class="text">تحميل الفديو من الجهاز</span>
+                                </label>
+                            </div>
+                            <div style="display:none" class="form-group notyoutubeChoice">
+                                <div class="wrap-input100 validate-input m-b-16">
+                                    <input style="display:none" asp-for="Url" class="input100">
+                                    <span asp-validation-for="Url" class="focus-input100"></span>
+                                </div>
+                            </div>
+                            <div class="form-group youtubeChoice">
+                                <div class="custom-file">
+                                    <input title="من مفضلك قم بتحميل ملف الفديو" required asp-for="Video" accept="video/*" class="custom-file-input">
+                                    <label ng-controller="courseData" class="custom-file-label" for="Video">
+                                        <span ng-bind="VideoTextTitle" class="text">تحميل ملف الفديو</span>
+                                    </label>
+                                </div>
+                                <span asp-validation-for="Video" class="focus-input100"></span>
+                            </div>
+                            <div class="form-group">
+                                <div style="display:none" id="VideoUploadProgressbar"></div>
+                            </div>
+                            <div class="container-login100-form-btn p-t-25">
+                                <button type="button" id="AddSubmitVideoTutorialBtn" class="login100-form-btn">
+                                    <i class="fa fa-plus"></i>
+                                    <span class="text">اضافة</span>
+                                </button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">اغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+

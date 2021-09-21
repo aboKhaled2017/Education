@@ -1,0 +1,40 @@
+@import 'videoSection';
+html {
+  box-sizing: border-box;
+}
+body {
+  background: #cce;
+}
+#mainPage {
+  overflow: hidden;
+  > #imgBg {
+    height: $mainPageHeight;
+    position: relative;
+    margin-top: 66px;
+    > img {
+      width: 100%;
+    }
+  }
+}
+.authenticatedContent {
+  #mainPage {
+    margin: -10px -5px;
+    #imgBg {
+      margin-top: 0;
+    }
+  }
+  #fluidPlayer {
+    top: $marginAfterNavBar;
+  }
+}
+.main-panel {
+  &.translated {
+    left: 211px;
+  }
+  transition: all 0.5s ease-in-out;
+  overflow-y: auto;
+  height: calc(100% - 61px);
+  .content {
+    padding: 10px 5px;
+  }
+}

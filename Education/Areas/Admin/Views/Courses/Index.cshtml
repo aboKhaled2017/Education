@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "الكورسات";
+}
+@section Scripts{
+    <script src="/dist/Admin/js/Courses.bundle.js"></script>
+}
+<h2 class="text-primary text-center">صفحة الكورسات</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#AddCourseCollaps">
+                                <span>اضافة كورس جديد</span>
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="AddCourseCollaps" class="panel-collapse collapse" area-expanded="true">
+                        <div class="panel-body">
+                            <partial name="_AddCourse" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#GetCoursesCollaps">
+                                <span>الكورسات التى تم تسجيلها</span>
+                                <i class="fa fa-graduation-cap"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="GetCoursesCollaps" class="panel-collapse collapse in" area-expanded="true">
+                        <div class="panel-body">
+                            <partial name="_GetCourses" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<partial name="_EditCourse" />
+

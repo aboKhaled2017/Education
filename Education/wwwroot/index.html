@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/video/video-js.css">
+    <link rel="stylesheet" href="./lib/video/videojs-playlist-ui.css">
+    <link rel="stylesheet" href="./lib/video/videojs-playlist-ui.vertical.css">
+</head>
+<body>
+    <div class="player-container">
+        <video id="video" class="video-js" height="300" width="600" controls>
+            <source src="./videos/1.mp4" type="cideo/mp4">
+                <source src="./videos/1.webm" type="cideo/webm">
+        </video>
+        
+    </div>
+    <div class="vjs-playlist">
+
+        </div>
+
+    <script src="./lib/video/video.js"></script>
+    <script src="./lib/video/videojs-playlist.js"></script>
+    <script src="./lib/video/videojs-playlist-ui.js"></script>
+    <script>
+        var player=videojs('video');
+     var playlist=[
+        {
+             name:'mohamed khaled',
+             description:"ahmed mohamed ali any thing you anrt hdh fhe fefg hwef fwh fwhef hwef hfbhew fb hbf hwbf",
+             duration:45,
+             sources:[
+             {src:'/videos/Tutorials/v1.mp4',type:"video/mp4"},
+             {src:'/videos/Tutorials/v1.webm',type:"video/webm"},
+             ],
+            thumbnail:[
+                {
+                srcset:"/images/videoLeft.jpg",typr:"image/jpeg",
+                media:'(min-width:400px)'
+                
+                }
+            ]
+        },
+        {
+             name:'mohamed ali',
+             description:"ahmed samhe hhhh ali any thing you anrt hdfffffffffffffffffffff fwh fwhef hwef hfbhew fb hbf hwbf",
+             duration:45,
+             sources:[
+             {src:'/videos/Tutorials/v2.mp4',type:"video/mp4"},
+             {src:'/videos/Tutorials/v2.webm',type:"video/webm"},
+             ],
+            thumbnail:[
+                {
+                srcset:"/images/videoLeft.jpg",typr:"image/jpeg",
+                media:'(min-width:400px)'
+                
+                }
+            ]
+        },
+        {
+             name:'mohamed waleeeeeeeeeeed',
+             description:"ahmed samhe lll ali any thing you anrt ppppppppppppp fwh fwhef hwef ll fb hbf hwbf",
+             duration:45,
+             sources:[
+             {src:'/videos/Tutorials/v3.mp4',type:"video/mp4"},
+             {src:'/videos/Tutorials/v3.webm',type:"video/webm"},
+             ],
+            thumbnail:[
+                {
+                srcset:"/images/videoRight.jpg",typr:"image/jpeg",
+                media:'(min-width:400px)'
+                
+                }
+            ]
+        },
+    ];
+    player.playlist(playlist);
+    player.playlistUi();
+    </script>
+</body>
+</html>

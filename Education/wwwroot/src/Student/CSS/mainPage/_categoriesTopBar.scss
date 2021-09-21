@@ -1,0 +1,114 @@
+.tracks-wrapper{
+    .steps{
+        li{
+            &.step{
+                >a{
+                    background: $trackStepBgColor;
+                    font-size: 19px;
+                    color: $trackStepColor;
+                    opacity: .8;
+                    border-radius: 15px;
+                    padding: 9px 23px;
+                }
+            }
+            &.step:not(.disabled):not(.superCategory){
+                >a{                     
+                    transition: box-shadow .5s linear;
+                    &:hover{
+                        opacity: 1;
+                        background: $secondColor;
+                        border-radius: 20px;
+                        color:#fff !important;
+                        box-shadow:0px 1px 14px #444;
+                    }
+                }
+            }
+           /* &.open{
+                >a{
+                    opacity: 1;
+                        background: $secondColor;
+                        border-radius: 20px;
+                        color:#fff !important;
+                        box-shadow:0px 1px 14px #444;
+                }
+            }*/
+            &.disabled{
+                >a{ 
+                    pointer-events: none; 
+                    opacity: .4;                   
+                    &:hover,&:focus{
+                    background: $trackStepBgColor !important;
+                    color: $trackStepColor !important;
+                    opacity: .8 !important;
+                    }
+                }
+            }
+            &.active>a{
+                border-radius:20px !important;
+                opacity: 1 !important;
+                color:#fff !important;
+                background: $secondColor !important;
+            }
+        }
+        li.superCategory{
+            >a{
+                padding:0;
+            }
+            ul.subCategories{
+                padding: 0;
+                border-radius: 15px;
+                li.subCategory{
+                    cursor: pointer;
+                    display: inline-block;
+                    padding: 9px 30px;
+                    //padding-left: 40px;
+                    position: relative;
+                    margin: 0 -3px;
+                    &:not(:last-child)::after{
+                        position: absolute;
+                        z-index: 1;
+                        content: "";
+                        top: 0.28em;
+                        left: -14px;
+                        border: medium none;
+                        width: 1.47em;
+                        background: #fff;
+                        height: 1.47em;
+                        transform: rotate(45deg);
+                        box-shadow: -1px 1px 0 0 rgba(0, 0, 0, 0.15) inset;
+                        transform: rotate(45deg);
+                        box-shadow: 1px -1px 0 0 rgba(0, 0, 0, 0.15) inset;
+                    }
+                    &:first-child{
+                     padding-right: 15px;
+                     border-top-right-radius: 15px;
+                     border-bottom-right-radius: 15px;                 
+                    }
+                    &:last-child{
+                      padding-left: 15px;
+                      border-top-left-radius: 15px;
+                      border-bottom-left-radius: 15px;
+                    } 
+                    &:hover{
+                     background: $secondColor;
+                     color:#fff;
+                    }
+                    &:hover:after{
+                        background: $secondColor;
+                    }
+                }
+                li.active{
+                  background: $secondColor;
+                  color: #fff;
+                }
+            }
+        }
+    }
+}
+    .tracks-wrapper  .open > a, 
+    .tracks-wrapper  .open > a:hover,
+  .tracks-wrapper  .open > a:focus{
+    background-color: #fff !important;
+    color:$mainColor !important;
+}
+ 

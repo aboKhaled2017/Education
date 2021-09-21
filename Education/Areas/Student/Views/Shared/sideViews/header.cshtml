@@ -1,0 +1,47 @@
+﻿<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainCollapse">
+                <i class="sr-only">Toggle navigation</i>
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+            </button>
+            <a href="/" class="navbar-brand">
+                <img src="/images/logo.png" alt="" srcset="">
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" id="mainCollapse">
+
+            @if(User.Identity.IsAuthenticated){
+            {await Html.RenderPartialAsync("sideViews/categoriesTopBar");}
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <p>
+                            <span id="userNameElement">@User.Identity.Name</span>
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/Profile">الصفحة الشخصية</a></li>
+                        <li><a href="/Logout">خروج</a></li>
+                    </ul>
+                </li>
+            </ul>
+            }
+            else{
+            <ul class="nav navbar-nav navbar-right navbar_signAndLogin ">
+                <li>
+                    <a class="info login100-form-btn text-center" onclick="$('#registerModal').modal('show')"><span
+                            class="glyphicon glyphicon-user"></span>
+                        تسجيل</a></li>
+                <li>
+                    <a class="login100-form-btn text-center" onclick="$('#loginModal').modal('show')"><span
+                            class="glyphicon glyphicon-log-in"></span>
+                        دخول</a></li>
+            </ul>
+            }
+        </div>
+    </div>
+</nav>

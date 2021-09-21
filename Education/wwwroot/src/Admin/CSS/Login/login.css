@@ -1,0 +1,15 @@
+#loginForm {
+  margin: 100px auto;
+  width: 50%;
+}
+#loginForm .img > i.fa {
+  font-size: 120px;
+}
+
+@media screen and (max-width: 991px) {
+  #loginForm {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

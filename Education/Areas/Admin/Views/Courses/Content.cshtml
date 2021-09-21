@@ -1,0 +1,63 @@
+﻿@model CourseData
+@{
+    ViewData["Title"] = "الكورسات";
+    ViewData["type"] = "edit";
+    VideoModel vmodel=null;
+    VideoModel_Edit vmodel_edit = null;
+}
+@section Styles{
+    <link type="text/css" href="/plugins/datatables.min.css" />
+}
+@section Scripts{
+    <script type="text/javascript" src="/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/plugins/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/dist/Admin/js/CourseContent.bundle.js"></script>
+}
+<h2 ng-controller="courseData" class="text-primary text-center">محتويات كورس <span ng-bind="Name" id="CorseHeader"></span></h2>
+<div class="container-fluid">
+    <div class="row">
+        <div ng-controller="courseData" class="col-sm-12" id="course_content">          
+            <div ng-bind="Description" id="Description_text" class="DivPart"></div>
+            <div class="DivPart">تكلفة الكورس <span ng-bind="CostOfCourse" class="badge badge-info"></span></div>
+            <div ng-bind="Period" class="DivPart"></div>
+            <div ng-bind="IsOpened" class="DivPart"></div>
+            <div ng-bind="StartDateOfBegin" class="DivPart"></div>
+            <div ng-bind="CategoryId" class="DivPart"></div>
+            <div data-val="@Model.VideosCount" id="videoCountText" class="DivPart" ng-bind="VideosCount"></div>
+        </div>
+        <div class="col-sm-12">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#CourseSettingCollaps">
+                                <span>اعدادات الكورس</span>
+                                <i class="fa fa-gears"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="CourseSettingCollaps" class="panel-collapse collapse" area-expanded="true">
+                        <div class="panel-body">
+                            <div ng-controller="courseData" id="EditCourse" class="ExtendedForm">
+                                <partial name="_CourseForm" model="Model.GetCourseModel()" />
+                            </div>
+                            <div class="imgSetting container">
+                                <img id="courseImgBack" width="200" class="img-responsive img-thumbnail" src="~/images/admin/courses/@Model.backgroundImgSrc" />
+                                <button class="btn btn-danger" id="changeImage">
+                                    <span>تغييرالصورة</span>
+                                    <i class="fa fa-picture-o"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <partial name="_videos" model="vmodel_edit"/>
+        </div>
+    </div>
+</div>
+@section Modals{
+    <partial name="_AddVideoModal" model="vmodel" />
+}

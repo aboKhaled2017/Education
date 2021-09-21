@@ -1,0 +1,40 @@
+@model StudentAccount
+<div class="editAccount col-sm-6">
+    <h5 class="title badge badge-primary">تعديل الحساب</h5>
+    <form id="EditAccountForm" action="" method="get" class="center-block">
+        <input asp-for="Id" type="hidden">
+        <div class="form-group">
+            <div class="wrap-input100 validate-input">
+                <input asp-for="fname" class="input100" placeholder="الاسم الاول">
+                <span asp-validation-for="fname" class="focus-input100"></span>
+                <span class="symbol-input100">
+                    <span class="fa fa-user"></span>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="wrap-input100 validate-input">
+                <input asp-for="lname" class="input100" placeholder="الاسم الاخير">
+                <span asp-validation-for="lname" class="focus-input100"></span>
+                <span class="symbol-input100">
+                    <span class="fa fa-user"></span>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="wrap-input100 validate-input">
+                <input asp-for="email" class="input100" placeholder="البريد الألكترونى">
+                <span asp-validation-for="email" class="focus-input100"></span>
+                <span class="symbol-input100">
+                    <span class="fa fa-envelope"></span>
+                </span>
+            </div>
+        </div>
+        <div class="container-login100-form-btn">
+            <button type="button" id="AccountSubmitBtn" class="login100-form-btn btn">
+                <i class="fa fa-edit"></i>
+                <span>تعديل</span>
+            </button>
+        </div>
+    </form>
+</div>

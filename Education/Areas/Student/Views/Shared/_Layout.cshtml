@@ -1,0 +1,78 @@
+﻿@inject SignInManager<ApplicationUser> _SignInManager
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Education</title>
+    <environment include="Development">
+        <link rel="stylesheet" href="/lib/bootstrapAr/css/bootstrap-ar.css">
+        <link rel="stylesheet" href="/lib/fonts/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/dist/Student/StudentMain1.bundle.css">
+        <link rel="stylesheet" href="/src/Student/CSS/mainPage/main.css">
+        @RenderSection("style", required:false)
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+            asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-fallback-test-class="sr-only"
+            asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/dist/Student/StudentMain.bundle.css">       
+    </environment>
+</head>
+
+<body dir="rtl" data-page="@ViewData["datapage"]">
+    @{await Html.RenderPartialAsync("sideViews/header");}
+    <!--<partial name="_CookieConsentPartial" />-->
+
+    <div class="body-content">
+        @RenderSection("fluidPlayer", required: false)
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="wapper">
+                @{await Html.RenderPartialAsync("sideViews/mainSlider");}
+                <div class="main-panel">
+                    <div class="content authenticatedContent">
+                        @RenderBody()
+                    </div>
+                </div>
+
+                <!--RenderSection("rightSideBarForItems",required: false)-->
+            </div>
+        }
+        else
+        {
+            @RenderBody()
+        }
+        <footer></footer>
+    </div>
+    <environment include="Development">
+        <script src="/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+        <script src="/lib/jquery-ui/jquery-ui.min.js" asp-append-version="true"></script>
+        <script defer src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        <script src="/lib/animation/wow.min.js"></script>
+        <script src="/dist/Student/StudentMain.bundle.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js" asp-fallback-test="window.jQuery" crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="/lib/jquery-ui/jquery-ui.min.js" asp-append-version="true"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal" crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        <script src="/lib/animation/wow.min.js"></script>
+        <script src="/dist/Student/StudentMain.bundle.js"></script>
+    </environment>
+</body>
+
+</html>

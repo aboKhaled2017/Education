@@ -1,0 +1,14 @@
+@model Tuple<StudentAccount, ChangePasswordViewModel,StudentMembership>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="account">
+                    <div class="content formArea">
+                        @{await Html.RenderPartialAsync("accountEdit",@Model.Item1);}
+                        @{await Html.RenderPartialAsync("passwordEdit",@Model.Item2);}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,54 @@
+ 
+@media screen and (max-width: 767px) {
+    .tracks-wrapper{
+        .steps{
+            li{
+                display: inline-block;
+                &.step{
+                    >a{
+                        font-size: 15px;
+                        border-radius: 11px;
+                    }
+                }
+                
+            }
+            li.superCategory{
+                >a{
+                    padding:0;
+                }
+                ul.dropdown-menu{
+                    float: right;
+                    li{
+                        display: block;
+                         >a{
+                            padding: 3px;
+                            border-radius: 9px;
+                            background: #f5f5f5;
+                            text-align: center;
+                            color: $mainColor;
+                            &:hover{
+                                background-color: $secondColor;
+                            }
+                         }
+                    }
+
+                }
+                ul.subCategories{
+                    li.subCategory{                        
+                       &:not(:last-child)::after{
+                            top: 0.33em;
+                            width: 1.85em;
+                            height: 1.85em;
+                            left: -13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media  screen and (max-width: 360px){
+     .tracks-wrapper{
+        margin: auto -13px;
+     }   
+}

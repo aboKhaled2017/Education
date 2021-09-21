@@ -1,0 +1,28 @@
+@media screen and (max-width:767px){
+    #profileTabs {
+        width: 100%;
+        .formArea{
+            padding: 0;
+            form{
+                margin: auto -18px;
+                .input100 {
+                    font-size: 16px;
+                    line-height: 1;
+                    height: 40px;
+                }
+                .login100-form-btn{
+                    font-size: 11px;
+                }
+            }
+            .editAccount ,.editPassword{
+                padding: 10px;
+            }
+        }
+        .nav-pills > li {
+            width: 40%;
+            a{
+                font-size: 12px;
+            }
+        }
+    }
+}

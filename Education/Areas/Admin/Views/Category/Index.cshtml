@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "الاقسام";
+}
+@section Styles{
+    <link type="text/css" href="/plugins/datatables.min.css" />
+}
+@section Scripts{
+    <script type="text/javascript" src="/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/dist/Admin/js/Categories.bundle.js"></script>
+}
+<h2 class="text-primary text-center">اعدادات الاقسام</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tile">
+                <div class="tile-body">
+                    <table class="table table-hover table-bordered table-striped rounded" id="categoriesTb">
+                        <thead>
+                            <tr>
+                                <td colspan="4">
+                                    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#addCategory" aria-expanded="false" aria-controls="addCategory">
+                                        <span>اضافة قسم </span>
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                    <div class="collapse" id="addCategory">
+                                        <div class="card">
+                                            <form class="form-inline" role="form">
+                                                <div class="form-group">
+                                                    <label>الاسم</label>
+                                                    <input type="text" class="form-control" id="Cat_Name" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">الحالة</label>
+                                                    <label class="radio-inline"><input value="true" class="form-check-inline" type="radio" name="state" checked>تفعيل</label>
+                                                    <label class="radio-inline"><input value="false" class="form-check-inline" type="radio" name="state">تعطيل</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="dropdown" id="MainCategory">
+                                                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                                          <span class="text">اختر القسم الاساسى</span>
+                                                          <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button id="saveCategory" type="button" class="btn btn-primary">
+                                                        <span>
+                                                            حفظ 
+                                                        </span>
+                                                        <i class="fa fa-check"></i>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>اسم القسم</th>
+                                <th>الحالة</th>
+                                <th>التحكم</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table table-hover table-bordered table-striped" id="TbDetails" style="display:none">
+    <thead>
+        <tr>
+            <th></th>
+            <th>اسم القسم</th>
+            <th>الحالة</th>
+            <th>التحكم</th>
+        </tr>
+    </thead>
+</table>

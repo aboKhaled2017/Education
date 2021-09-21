@@ -1,0 +1,24 @@
+.navbar-nav > li > .dropdown-menu{
+    >li {
+        border-bottom: 1px solid #73859f2b;
+        >a{
+            color: $mainColor;
+            font-size: 18px;
+            opacity: .7;
+            transition: all .3s ease-in-out;
+            &:hover{
+                opacity: 1;
+                font-weight: bold;
+            }
+        }
+    }
+    >li.disabled{
+        >a{
+            &:hover{
+                opacity: initial;
+                font-weight: inherit;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

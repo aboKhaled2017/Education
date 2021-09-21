@@ -1,0 +1,56 @@
+@media screen and (max-width: 767px) {
+  .navbar {
+    &_signAndLogin {
+      text-align: center;
+      margin: 0;
+      > li {
+        display: inline-block;
+      }
+    }
+  }
+  #videoSection {
+    .video-player {
+      float: none !important;
+      margin: 10px auto !important;
+    }
+  }
+  .formModal {
+    width: 90%;
+    margin: auto;
+  }
+  #fluidPlayer {
+    width: 90%;
+    left: 5%;
+  }
+  #mainPage > #imgBg {
+    margin-top: 51px;
+  }
+  .sidebar,
+  .main-panel {
+    top: $marginAfetrNavBarSm;
+  }
+  .main-panel {
+    right: 0;
+    width: 100%;
+    &.translated {
+      left: 230px;
+    }
+    &.unTranslated {
+      left: 41px;
+    }
+  }
+  .closedSideBar {
+    left: -$minimizedSideBarWidth;
+    .sidebar-wrapper {
+      overflow: inherit;
+      .nav li.toggleOpen i {
+        right: -56px;
+        position: absolute;
+        background: $mainColor;
+        border-radius: 7px;
+        top: 5px;
+        transition: transform 0.01s ease-in-out;
+      }
+    }
+  }
+}

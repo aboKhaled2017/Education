@@ -1,0 +1,48 @@
+﻿@model CourseModel
+<div id="GetCourses" class="container-fluid">
+    <h6 class="CourcesCount"><span class="count"></span> كورس تعليمى</h6>
+    <div class="row courses">
+        <div class="text-center loading">
+            <i class="fa fa-spin fa-spinner"></i>
+        </div>       
+    </div>
+</div>
+<div class="CourseCardTemplate text-center col-md-4 col-sm-6 hidden">
+    <div class="card">
+        <img class="img-responsive img-thumbnail" src="~/images/admin/courses/1.jpg" />
+        <div class="holder"></div>
+        <span class="videoCount">
+            25
+        </span>
+        <div class="btnControls">
+            <button class="btn btn-primary editCourse">
+                <span>تعديل </span>
+                <i class="fa fa-edit"></i>
+            </button>
+            <button class="btn btn-danger deleteCourse">
+                <span>حذف </span>
+                <i class="fa fa-remove"></i>
+            </button>
+        </div>
+        <i class="EditBcImg fa fa-picture-o fa-2x" title="تغيير صورة الخلفية"></i>
+        <div class="details text-center" title="التفاصيل">
+            <i class="fa fa-info showInfo"></i>
+        </div>
+        <h4 class="Name">الرياضيات</h4>
+        <div class="courseInfo text-left">
+            <i class="fa fa-window-close-o closeInfo fa-2x"></i>
+            <ul>
+                <li class="Cost">سعر الكورس 150.2 جنية</li>
+                <li class="Date">يبدأ فى 12/10/2017</li>
+                <li class="IsOpened">الكورس متاح من الان</li>
+                <li class="Category">قسم الثانوى</li>
+                <li class="Period">يستغرق الكورس مدة 3 شهورتقريبا</li>
+            </ul>
+        </div>
+    </div>
+    <div class="Desc" title="الرياضيات ونتعلم من خلالها الكثير من الحاجات و الاهواى والميول">نقوم فى هذة الدورة بشرح مفصل لمادة الرياضيات ونتعلم من خلالها الكثير من الحاجات و الاهواى والميول</div>
+    <a class="btn btn-info content" href="#">
+        <span>محتويات الكورس</span>
+        <i class="fa fa-book"></i>
+    </a>
+</div>
